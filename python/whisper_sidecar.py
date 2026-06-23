@@ -124,7 +124,14 @@ class SidecarRunner:
         """Start the persistent sidecar loop."""
         self._install_signal_handlers()
         self.transcriber.load_model()
-        self._write_stdout_json({"status": "ready"})
+        self._write_stdout_json(
+            {
+                "status": "ready",
+                "model": self.transcriber.model_name,
+                "device": self.transcriber.device,
+                "compute_type": self.transcriber.compute_type,
+            }
+        )
 
         for raw_line in sys.stdin:
             if not self._running:

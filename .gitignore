@@ -28,6 +28,7 @@ coverage/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+tmp/
 
 # OS / editor
 .DS_Store
