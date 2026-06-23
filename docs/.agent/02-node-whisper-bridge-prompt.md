@@ -54,7 +54,7 @@ Kita tidak perlu terlalu banyak class kalau bisa dibuat lebih simple tanpa mengo
 
 Rekomendasi struktur minimal:
 - 1 file utama untuk bridge
-- 1 file test runner atau demo CLI
+- 1 file test runner atau demo CLI di `demo/`
 
 Jika kamu tetap merasa class diperlukan, gunakan maksimum 2-3 class saja dan jangan over-engineer.
 
@@ -148,7 +148,7 @@ Atau API equivalent yang menurutmu paling clean.
 Script harus bisa diuji langsung dari console, tanpa browser, misalnya:
 
 ```bash
-node modules/demoWhisperTest.js
+node demo/demoWhisperTest.js
 ```
 
 ### Test Mode Minimal
@@ -198,7 +198,7 @@ Kalau tidak ada file audio, buat dummy audio kecil supaya kita bisa verify flow 
 `modules/whisperBridge.js`
 
 ### File Test (disarankan)
-`modules/demoWhisperTest.js`
+`demo/demoWhisperTest.js`
 
 ### Ekspor yang diharapkan
 
@@ -264,3 +264,4 @@ Fokus hanya pada bridge Node.js ↔ Python STT sidecar.
 ## Final Note
 
 Buat solusi yang paling clean dan pragmatic. Kalau menurutmu satu class + satu demo file cukup, itu boleh. Kalau lebih bagus tanpa class, tetap boleh selama API tetap rapi dan maintainable.
+

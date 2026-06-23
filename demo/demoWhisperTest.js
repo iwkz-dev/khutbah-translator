@@ -1,5 +1,5 @@
 const { performance } = require('perf_hooks');
-const { WhisperBridge } = require('./whisperBridge');
+const { WhisperBridge } = require('../modules/whisperBridge');
 
 function generateDummyAudio(durationSeconds = 3, sampleRate = 16000) {
   const totalSamples = Math.floor(durationSeconds * sampleRate);
@@ -54,3 +54,4 @@ main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
+
